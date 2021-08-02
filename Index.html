@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .image-1
+        {
+            width: 160px;
+            height: 100px;
+            cursor: context-menu;
+            margin-left: 90px;
+            margin-top: 20px;
+            opacity: 0.6;
+        }
+        .topnav
+        {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .topnav a
+        {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover
+        {
+            background-color: #ddd;
+            color: black;
+        }
+        .topnav a.active
+        {
+            background-color: #04AA6D;
+            color: white;
+        }
+        .box-1
+        {
+            margin-top: 70px;
+            margin-left: 90px;
+            font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+            font-stretch: expanded;
+            font-weight: 700;
+            opacity: 0.6;
+        }
+        .box-2
+        {
+            margin-top: 50px;
+            margin-left: 90px;
+            width: 100px;
+            height: 30px;
+            border: 1px solid darkblue;
+            border-radius: 18px;
+            background-color: lightblue;
+            color: black;
+            padding-left: 23px;
+            padding-top: 8px;
+            cursor: pointer;
+        }
+        .box-2:hover
+        {
+            background-color: white;
+            color: blue;
+            box-shadow: 1px 1px 5px black;
+            font-size: 19px;
+        }
+        .box-3
+        {
+            width: 100%;
+            height: 200px;
+            background-image: linear-gradient(to right,purple,purple,violet);
+            border-radius: 4px;
+            color: white;
+            margin-top: 50px;
+            margin-left: 0px;
+            opacity: 0.9;
+        }
+        .box-3 div.box-4
+        {
+            font-weight: 700;
+            color: white;
+            padding-top: 34px;
+            padding-left: 24px;
+            opacity: 0.7;
+        }
+        .box-3 div.box-5
+        {
+            color: white;
+            margin-top: -60px;
+            margin-left: -270px;
+            opacity: 0.6;  
+        }
+        .box-3 div.box-6
+        {
+            width: 180px;
+            height: 30px;
+            float: right;
+            border: 2px solid white;
+            border-radius: 25px;
+            font-weight: 900;
+            padding-left: 19px;
+            padding-top: 14px;
+            margin-top: -40px;
+            margin-right: 260px;
+        }
+        .list
+        {
+            width: 100%;
+            height: 600px;
+            margin-top: 0px;
+            border-radius: 3px;
+            background-image: url("https://images.unsplash.com/photo-1544006659-f0b21884ce1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwd29ya2luZyUyMG9uJTIwY29tcHV0ZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            opacity: 0.7;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-stretch: expanded;
+            font-weight: 900;
+            padding-top: 150px;
+        }
+        .list div.list-1
+        {
+            width: 500px;
+            height: 300px;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            margin-top: 40px;
+            padding-top: 80px;
+        }
+        .list div.list-2
+        {
+            width: 140px;
+            height: 30px;
+            background-color: lightblue;
+            color: white;
+            border: 1px solid lightblue;
+            border-radius: 18px;
+            margin-top: 14px;
+            padding-top: 10px;
+            cursor: pointer;
+        }
+        .list div.list-2:hover
+        {
+            background-color: white;
+            color: darkblue;
+            box-shadow: 1px 1px 5px black;
+            font: 19px;
+        }
+        .item
+        {
+            margin-top: 160px;
+            margin-left: 70px;
+            font-family: sans-serif, "Helvetica Neue", "Leucida Grande", Arial;
+            font-stretch: expanded;
+            font-weight: 700;
+            opacity: 0.6;
+        }
+        .item-1
+        {
+            width: 600px;
+            height: 520px;
+            margin-top: -320px;
+            margin-left: 540px;
+        }
+        .material-1
+        {
+            width: 500px;
+            height: 400px;
+            margin-top: 10px;
+            margin-left: 70px;
+            border: 1px solid gray;
+            border-radius: 18px;
+            box-shadow: 1px 1px 5px black;
+            opacity: 0.6;
+        }
+        .material-2
+        {
+            width: 500px;
+            height: 400px;
+            margin-top: -402px;
+            margin-left: 610px;
+            border: 1px solid gray;
+            border-radius: 18px;
+            box-shadow: 1px 1px 5px black;
+            opacity: 0.6;
+        }
+        .material-1 img.flat-icon
+        {
+            width: 80px;
+            height: 80px;
+            padding-top: 30px;
+        }
+        .material-2 img.flat
+        {
+            width: 80px;
+            height: 80px;
+            padding-top: 30px;
+        }
+        .fol-1
+        {
+            width: 800px;
+            height: 450px;
+            margin-top: 80px;
+            font-family: sans-serif, "Helvetica Neue", "Leucida Grande", Arial;
+            font-stretch: expanded;
+            font-weight: 900;
+            padding-top: 40px;
+            padding-left: 20px;
+            opacity: 0.6;
+        }
+        .fol-1 img.rocket
+        {
+            width: 200px;
+            height: 200px;
+            margin-top: -100px;
+            margin-left: 700px;
+        }
+        .fol-1 div.inner
+        {
+            margin-top: -70px;
+        }
+        .circle-1
+        {
+            width: 90px;
+            height: 90px;
+            margin-top: -240px;
+            margin-left: 270px;
+            opacity: 0.6;
+            padding-top: 25px;
+            padding-left: 10px;
+        }
+        .circle-2
+        {
+            width: 130px;
+            height: 90px;
+            margin-top:-90px;
+            margin-left: 480px;
+            opacity: 0.6;
+        }
+        .circle-3
+        {
+            width: 90px;
+            height: 90px;
+            margin-top: -90px;
+            margin-left: 700px;
+            opacity: 0.6;
+        }
+        .circle-4
+        {
+            width: 120px;
+            height: 90px;
+            margin-top: -90px;
+            margin-left: 890px;
+            opacity: 0.6;
+        }
+        .main
+        {
+            width: 100%;
+            height: 450px;
+            margin-top: 100px;
+            font-family: sans-serif, "Helvetica Neue", "Leucida Grande", Arial;
+            font-stretch: expanded;
+            font-weight: 700;
+            opacity: 0.6;
+            background-image: linear-gradient(to right, lightblue, white, white);
+            padding-left: 50px;
+            padding-top: 40px;
+        }
+        .main img.main-1
+        {
+            float: right;
+            width: 400px;
+            height: 400px;
+            margin-top: -330px;
+            margin-left: 500px;
+            margin-right: 220px;
+        }
+        .scroll
+        {
+            width: 100%;
+            height: 580px;
+            margin-top: 70px;
+            padding-top: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-stretch: expanded;
+            font-weight: 700;
+            opacity: 0.6;
+        }
+        .scroll div.scroll-1
+        {
+            width: 300px;
+            height: 260px;
+            border: 1px solid black;
+            border-radius: 13px;
+            margin-top: 70px;
+            padding-top: 35px;
+            margin-left: 130px;
+            padding-left: 16px;
+            box-shadow: 1px 1px 4px black;
+            opacity: 0.8;
+        }
+        .scroll div.scroll-2
+        {
+            width: 300px;
+            height: 260px;
+            border: 1px solid black;
+            border-radius: 13px;
+            margin-top: -295px;
+            margin-left: 530px;
+            padding-top: 35px;
+            padding-left: 19px;
+            box-shadow: 1px 1px 4px black;
+            opacity: 0.8;
+        }
+        .scroll div.scroll-3
+        {
+            width: 300px;
+            height: 260px;
+            border: 1px solid black;
+            border-radius: 13px;
+            box-shadow: 1px 1px 4px black;
+            margin-top: -295px;
+            margin-left: 940px;
+            padding-left: 19px;
+            padding-top: 35px;
+            opacity: 0.8;
+        }
+        .scroll div.scroll-1:hover
+        {
+            box-shadow: 3px 3px 6px black;
+        }
+        .scroll div.scroll-2:hover
+        {
+            box-shadow: 3px 3px 6px black;
+        }
+        .scroll div.scroll-3:hover
+        {
+            box-shadow: 3px 3px 6px black;
+        }
+        .details
+        {
+            width: 100%;
+            height: 650px;
+            background-image: linear-gradient(to right,lightblue,white,white);
+            margin-top: 0px;
+            padding-top: 80px;
+            font-weight: 700;
+            font-stretch: expanded;
+            opacity: 0.6;
+        }
+        .details div.contact
+        {
+            width: 500px;
+            height: 400px;
+            margin-top: 20px;
+            padding-top: 30px;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px darkblue;
+            opacity: 0.8;
+        }
+        input
+        {
+            width: 65%;
+            height: 40px;
+            padding-left: 10px;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        ::placeholder
+        {
+            font-weight: bold;
+        }
+        .details div.contact div.button
+        {
+            width: 130px;
+            height: 34px;
+            margin-top: 30px;
+            padding-top: 10px;
+            border: 2px solid darkblue;
+            border-radius: 25px;
+            background-color: lightblue;
+            color: darkblue;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .details div.contact div.button:hover
+        {
+            background-color: white;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="Campus_Hiring.html">SDE Campus Hiring</a>
+        <a href="WILP.html">WILP</a>
+        <a href="Mentors.html">Mentors</a>
+    </div>
+    <img  class="image-1" src="data:image/png;base64,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">
+    <div class="box-1">
+     <font size=10 color="black">Start </font><font size=10 color="darkblue">coding </font><font size=10 color="black">your <br>
+     career today</font>  <br> <br> <br>
+     <font size=6px color="darkblue">A life-changing experience</font> <br> <br>
+     <ul type="disc">
+       <li>Become a star developer</li>
+       <li> Intense programs delivered by industry veterans</li>
+       <li> Prep for tech jobs with our assistance</li>
+     </ul>
+    </div>
+    <div class="box-2"><a href="https://www.hackerrank.com/dashboard"><b>Let's  code!</b></a></div>
+    <div class="box-3">
+        <div class="box-4"><font size=9px>Code <br>
+         Asylums</font>
+        </div>
+        <div class="box-5"><center><font size=6px>Talk live to our experts now</font></center></div>
+        <div class="box-6"><i class="fa fa-phone">&nbsp&nbsp&nbsp +91 &nbsp 9971947591</i></div>
+    </div>
+    <div class="list">
+     <center><font size=10 color="magenta">Invest in yourself</font><br>
+      <font size=10 color="white">Rise above the rest</font></center>
+      <marquee behaviour="scroll" scrollamount="20"><center><div class="list-1">
+        <font color="black" size=5px>Campus Hiring</font><font color="blue" size=5px> SDE</font> <br>
+        <font color="black" size=5px> Program</font> <br><br>
+        Starting Date: <b>20th August,2021</b> <br>
+        <ul type="disc">
+        <li> DSA, full stack and system design</li>
+        <li> Ideal for campus placements (SDE role)</li>
+        <li> Program duration is 2 months</li>
+        </ul>
+        <div class="list-2"><a href="Campus_Hiring.html">Read More</a></div>
+        </div></center></marquee>
+    </div>
+    <div class="item">
+    <font color="darkblue" size=8>Versatile curriculum</font> <br> <br>
+    <font color="black" size=8>to keep you hooked</font>
+    </div>
+    <img class="item-1" src="https://thumbs.dreamstime.com/b/software-engineer-sit-chair-working-laptop-use-programming-language-code-flat-cartoon-style-vector-design-189895214.jpg">
+    <div class="material-1">
+     <center><img class="flat-icon" src="https://image.flaticon.com/icons/png/128/11/11296.png"></center> <br> <br>
+     <center><font size=5 color="black"><b>FULLSTACK WEB DEVELOPMENT</b></font></center>  <br>
+     <center><font size=4>Made for candidates with a passion for <br>
+     design, development and programming <br>
+     expertise, this course enables the average <br>
+     working professional to learn FullStack <br>
+     from scratch, with Industry-relevant <br>
+     projects and live exposure to both Client <br>
+     and Server-side Technologies like <br></font>
+     <font size=4 color="darkblue">React, Javascript, Nodejs, AWS and Git</font></center>
+    </div>
+    <div class="material-2">
+     <center><img class="flat" src="https://image.flaticon.com/icons/png/128/4/4318.png"></center>   <br> <br>
+     <center><font size=5 color="black"><b>DATA STRUCTURES AND ALGORITHMS</b></font></center>  <br>
+     <center><font size=4>Tailor made for candidates looking to boost <br>
+     their knowledge in DSA, our curated content <br>
+     takes a deep dive into algorithms like </font><font size=4 color="darkblue">Tree <br>
+     Graphs and Dynammic Programming. </font><font size=4>Supported <br>
+     with HackerRank Contests, Self Practice <br>
+     Material, and a Hands-On Coding Sessions and <br>
+     Pair Programming.</font></center>
+    </div>
+    <center><div class="fol-1">
+    <font size=9 color="darkblue"><center>Traction</center></font>
+    <img class="rocket" src="https://img.freepik.com/free-vector/cartoon-illustration-man-sitting-rocket-flying_262129-823.jpg?size=338&ext=jpg">
+    <center><div class="inner"><font size=5 color="black">We are on track to become the most <br>
+    sought after developer platform in India</font></div></center>
+    </div></center>
+    <div class="circle-1"><center><font size=6 color="darkblue">200+</font>
+    <font size=3>CONNECTED CAMPUSES</font></center></div>
+    <div class="circle-2"><center><font size=6 color="darkblue">12 LPA</font>
+    <font size=3>AVG. CTC</font></center></div>
+    <div class="circle-3"><center><font size=6 color="darkblue">700+</font>
+    <font size=3>SUCCESS STORIES</font></center></div>
+    <div class="circle-4"><center><font size=6 color="darkblue">12000</font>
+    <font size=3>COMMUNITY REACH</font></center></div>
+    <div class="main"><font size=7>Bringing you the most</font><br> <br>
+    <font size=8 color="darkblue"> emerging</font><font size=8> developer programs</font> <br> <br> <br><br>
+    <font size=5>Tailor-made for Indian developers</font> <br><br><br><br>
+    <font size=4 color="red">Our community has made it possible to bring in some <br>
+    amazing mentors who are working as Software Developers, <br>
+    Data Scientist and Platform Engineers at MNCs like Microsoft, <br>
+    Amazon, DE Shaw, etc. and several path breaking startups.</font>
+    <img class="main-1" src="https://thumbs.dreamstime.com/b/young-woman-giving-programming-courses-pointing-to-screen-assorted-icons-text-colored-vector-illustration-196879620.jpg">
+</div>
+<div class="scroll">
+<center><font size=7 color="darkblue">Step up</font><font size=7> your game <br>
+with us</font></center>   
+<div class=scroll-1><center><font size=6 color="black">Hackathon Invites</font>
+</center> <br> <br>
+<font size=3>Weekly challenges, hackerrank <br>
+problems, team assignments <br>
+and national level hackathons </font> <br>
+<font size=3 color="darkblue"><i>we take you everywhere!</i></font>
+</div>
+<div class="scroll-2"><center><font size=6 color="black">Placement Opportunities</font></center>
+<br> <br>
+<font size=3>Expert mock interviews, outreach strategies, Git <br> 
+Hub portfolio and many more, we have got you fully covered <br>
+to get your </font><font size=3 color="darkblue"><i>dream job.</i></font>
+</div>
+<div class="scroll-3"><center><font size=6 color="black">Real World Projects</font></center>
+<br> <br>
+<font size=3>We believe that real projects from the startup ecosystem are <br>
+the best way for </font><font size=3 color="darkblue"><i>conceptual implementations.</i></font>
+</div>
+</div>
+<div class="details"><center><font size=8 color="black">Want to take a look at <br>
+the </font><font color="darkblue" size=8>detailed curriculum?</font> <br> <br> <br>
+<font size=5 color="red">Give us your details and we will help you navigate better !!</font></center>
+<center><div class="contact">
+<form>
+<center><font color="darkgreen" size=6>Contact Us</font></center> <br> <br> 
+<input type="text" placeholder="Name" required>   <br> <br>
+<input type="email" placeholder="Email" required>  <br> <br>
+<input type="text" placeholder="Add a message" required>
+</form>
+<center><div class="button"><a href="Contact_Response.html">Submit</a></div></center>
+</div></center>
+</div>
+</body>
+</html>
